@@ -245,46 +245,14 @@ struct Littlecat: View {
 struct Item: View {
     var body: some View {
         HStack{
-            Image(.brick)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 20)
-                .offset(x:0,y:-185)
-            Image(.feather)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 20)
-                .offset(x:0,y:-185)
-            Image(.woods)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 20)
-                .offset(x:0,y:-185)
-            Image(.screw)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 20)
-                .offset(x:0,y:-185)
-            Image(.gold)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 20)
-                .offset(x:0,y:-185)
-            Image(.diamond)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 20)
-                .offset(x:0,y:-185)
-            Image(.bones)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 20)
-                .offset(x:0,y:-185)
-            Image(.shell)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 20)
-                .offset(x:0,y:-185)
+            Treasure(pic:"brick")
+            Treasure(pic:"feather")
+            Treasure(pic:"woods")
+            Treasure(pic:"screw")
+            Treasure(pic:"gold")
+            Treasure(pic:"diamond")
+            Treasure(pic:"bones")
+            Treasure(pic:"shell")
             
         }
     }
@@ -408,5 +376,16 @@ struct Top: View {
                 .offset(x:-276,y:-181)
                 .shadow(color:.yellow,radius: 5)
         }
+    }
+}
+
+struct Treasure: View {
+    let pic: String
+    var body: some View {
+        Image(pic)
+            .resizable()
+            .scaledToFit()
+            .frame(width: 20)
+            .offset(x:0,y:-185)
     }
 }
